@@ -1,7 +1,3 @@
-console.log("client side javascript has loaded")
-
-
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
@@ -23,7 +19,7 @@ weatherForm.addEventListener('submit', (e)=>{
                 messageOne.textContent = data.error
             } else {
                 messageOne.textContent = data.location
-                const message = "The temperature is " + data.forecast.temperature + " and it feels like " + data.forecast.feelslike + " degrees."
+                const message = "The temperature is " + data.forecast.temperature + " and it feels like " + data.forecast.feelslike + " ^degrees."
                 messageTwo.textContent = message
                 console.log(data.forecast)
                 console.log(data.location)
